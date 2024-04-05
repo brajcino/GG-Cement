@@ -10,85 +10,31 @@
 <link href="https://unpkg.com/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    
 
-    <section id="home">
-        <nav>
-            
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#residential">Residential</a></li>
-                <li><a href="#commercial">Commercial</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-
-
-        <div id="logoButtons">
-        <div id="paralellagram">
-            <img id="logo" src="/logotrans.png" alt="G&G Cement Contractors">
-            <div class="banner" id="banner1"><strong>🔔 (313)-298-9595</strong></div>
-            <div class="banner" id="banner2"><strong>📍 Greater Detroit area</strong></div>
-            <div class="banner" id="banner3"><strong>🔒 Fully licensed and insured</strong></div>
-            <div id="buttonsOnly">
-                <div class="button-group">
-            <button id="galleryButton">View our Gallery</button>
-            <button id="chatButton">Chat with live specialist</button>
-                </div>
-            <button id="estimateButton">Request a <strong>FREE</strong>estimate</button>
-        </div>
-        
-        </div>
-        </div>
-        </div>
-
-        <div class="scroll-arrow-container">
-            <i class="ri-arrow-down-circle-line"></i>
-        </div>
-        </section>
-    
-
-
-   
-
-    <section id="residential">
-        <h2>Residential Services</h2>
-        <p>Information about residential services...</p>
-    </section>
-
-    <section id="commercial">
-        <h2>Commercial Services</h2>
-        <p>Information about commercial services...</p>
-    </section>
-
-    <section id="gallery">
-        <h2>Our Gallery</h2>
-        <img src="assets/gallery1.jpg" alt="Gallery Image 1">
-        <img src="assets/gallery2.jpg" alt="Gallery Image 2">
-        <!-- Add more images as necessary -->
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="submit_form.php" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <input type="submit" value="Submit">
+<header class="hero">
+    <nav class="top-nav">
+        <a href="#" class="logo">GG</a>
+        <a href="#">Home</a>
+        <a href="#" class="dropdown">Residential</a>
+        <a href="#" class="dropdown">Commercial</a>
+        <a href="#">Testimonials</a>
+        <a href="#">Email us</a>
+    </nav>
+    <div class="hero-content">
+        <h1>Quality <span class="animated-text">drivways</span></h1>
+        <p class="area-description">Greater Detroit area</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit ornare eros, nec pellentesque massa posuere non.</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="Email">
+            <input type="text" placeholder="Phone">
+            <input type="text" placeholder="Service required">
+            <textarea placeholder="Details"></textarea>
+            <button type="submit" class="btn-quote">REQUEST FREE QUOTE</button>
         </form>
-    </section>
+    </div>
+    <div class="scroll-down">
+        <span class="arrow-bounce">&#x2193</span>
+    </div>
+</header>
 
-    <script src="scripts.js"></script>
-</body>
-</html>
-
-
-<!--video:::::::
