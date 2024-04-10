@@ -2,16 +2,60 @@ body, html{
     margin: 0;
     padding: 0;
     font-family: 'Noto Sans', sans-serif;
+    background-color:black;
+}
+
+.page-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color:white;
+    overflow-x: hidden;
+}
+
+.top-bar {
+    background-color: black;
+    color: white;
+    padding: 0.5em 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875em;
+    z-index:3;
+}
+
+.top-bar p, .top-bar-contacts p {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.top-bar, .top-nav {
+    position:relative;
+    z-index: 2;
+}
+
+.top-bar .mail-link{
+    color: white;
+    text-decoration: none;
+}
+
+.top-bar-contacts .mail-link:hover{
+    text-decoration: underline;
 }
 
 /* Hero Section */
 .hero {
-    background-image: url('Test1.png');
+    background-image: url('Test3.png');
     background-size: cover;
     background-position: center;
     color: white;
-    position: relative;
+    height: calc(100vh - 33px);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
 }
 
 .hero::before{
@@ -21,20 +65,85 @@ body, html{
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    z-index: 1;
 }
 
 .top-nav{
     display: flex;
     justify-content: space-between;
     padding: 1em;
-    position: absolute;
+    position: relative;
     width: 100%;
+    align-items: center;
+    z-index: 2;
+    background-color: #1e1e1e;
+    
+}
+
+.top-nav, .hero-content, .scroll-down {
+    padding: 0 10%;
+}
+
+.hero-content, .scroll-down {
+    padding: 0 10%;
+    position: relative;
     z-index: 2;
 }
 
-.logo{
-    font-size: 2em;
+.logo-link {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #C0C0C0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: spin 10s infinite linear;
+}
+
+.logo-link::after{
+    content: '';
+    position: absolute;
+    top: -100%; right: -100%;
+    bottom: -100%; left: -100%;
+    background: linear-gradient(45deg,rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+    animation: shine 2s infinite linear;
+    
+}
+
+@keyframes spin {
+    0% {transform: rotateY(0deg);}
+    100% {transform: rotateY(360deg);}
+    
+}
+
+.logo-image{
+    width: 100%;
+    height: auto;
+    animation: none;
+}
+
+.logo-image::after {
+    content: '';
+    position: absolute;
+    top: -50%; right: -50%;
+    bottom: -50%; left: -50%;
+    background: linear-gradient(45deg, transparent 49%, rgba(255,255,255,0.5) 50%);
+    animation: shine 2s linear infinite;
+    transform: rotate(30deg);
+}
+
+@keyframes shine {
+    from {transform: translateX(-50%) translateY(-50%) rotate(45deg);}
+    to {transform: translateX(50%) translateY(-50%) rotate(45deg);}
 }
 
 .dropdown:hover .dropdown-content{
@@ -42,16 +151,34 @@ body, html{
 }
 
 .hero-content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    display:flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
     z-index: 1;
+}
+
+.hero-content > div {
+    flex:1;
+    max-width: 50%;
 }
 
 .animated-text {
     /*placeholder for animated text*/
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contact-form input, .contact-form textarea, .contact-form button {
+    width: 100%;
+    max-width: 350px;
 }
 
 .contact-form input, .contact-form textarea {
@@ -73,8 +200,43 @@ body, html{
     transform: translateX(-50%);
 }
 
-@media (min-width: 2560px){
+@media (min-width: 1440px){
     .hero {
         height: 100vh;
     }
 }
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-bar, .top-nav, .hero-content, .scroll-down {
+        padding: 0 5%;
+    }
+
+    .top-bar p, .top-bar-contacts p {
+        text-align: center;
+    }
+
+    .top-bar-contacts {
+        margin-top: 0.5em;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-content > div {
+        max-width: none;
+        margin:  10px 0;
+    }
+
+    .contact-form {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
