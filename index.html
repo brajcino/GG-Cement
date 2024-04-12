@@ -9,8 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/remixicon/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="D:\GG2\favicon.ico" type="image/x-icon">
 </head>
 
+
+<body>
 <div class="page-container">
 
     <div class="top-bar">
@@ -20,26 +23,27 @@
         </div>
     </div>
     <nav class="top-nav">
-        <div class="nav-left">
-            <a href="#">Home</a>
-            <a href="#" class="dropdown">Residential</a>
-            <a href="#" class="dropdown">Commercial</a>
-        </div>
-
+            <a href="#" class="nav-item">Home</a>
+            <div class="divider"></div>
+            <a href="#" class="nav-item">Residential</a>
+            <div class="divider"></div>
+            <a href="#" class="nav-item" >Commercial</a>
     <a href="#" class="logo-link">
         <img src="LogoCircle.svg" alt="G&G Cement" class="logo-image">
     </a>
-
-        <div class="nav-right">
-            <a href="#">Gallery</a>
-            <a href="#">Testimonials</a>
-            <a href="#">Email us</a>
-        </div>
+    <a href="#" class="static-logo">
+        <img src="LogoCircle.svg" alt="G&G Cement" style="display: none;"
+    </a>
+            <a href="#" class="nav-item" >Gallery</a>
+            <div class="divider"></div>
+            <a href="#" class="nav-item divider">Testimonials</a>
+            <div class="divider"></div>
+            <a href="#" class="nav-item divider">Email us</a>
     </nav>
 <header class="hero">
     <div class="hero-content">
         <div class="hero-text">
-        <h1>Quality <span class="animated-text">drivways</span></h1>
+        <h1>Quality <span class="animated-text">driveways</span></h1>
         <p class="area-description">Greater Detroit area</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi suscipit ornare eros, nec pellentesque massa posuere non.</p>
     </div>
@@ -47,8 +51,15 @@
         <form class="contact-form">
             <input type="text" placeholder="Name">
             <input type="text" placeholder="Email">
-            <input type="text" placeholder="Phone">
-            <input type="text" placeholder="Service required">
+            <input type="text" placeholder="Phone number">
+            <select name="service" class="service-dropdown" placeholder="Service required">
+                <option value="" disabled selected>Service required</option>
+                <option value="driveway">Driveway</option>
+                <option value="patio">Patio</option>
+                <option value="deck">Deck</option>
+                <option value="basement">Basement</option>
+                <option value="other">Other</option>
+            </select>
             <textarea placeholder="Details"></textarea>
             <button type="submit" class="btn-quote">REQUEST FREE QUOTE</button>
         </form>
@@ -57,5 +68,18 @@
     <div class="scroll-down">
         <span class="arrow-bounce">&#x2193</span>
     </div>
+    
 </header>
+<div class="placeholder-section" style="height: 2000px;"></div>
+
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
 </div> /*this is the page container div*/
+</body>
